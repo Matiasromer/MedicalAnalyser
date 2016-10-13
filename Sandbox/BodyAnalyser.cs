@@ -19,7 +19,33 @@ namespace Sandbox
         public String AnalyseBMI(double heightInMeters, double weightInKilo)
         {
             // The below code must be changed
-            String analysis = "All people are beautiful, YOU are beautiful!";
+            double bmi = CalculateBMI(heightInMeters, weightInKilo);
+            string analysis = "Din BMI er : " + bmi + ", ";
+
+            if (bmi < 15)
+            {
+                analysis = analysis + "You are way to skinny";
+            }
+
+            if ((15 >= bmi) && (bmi <= 22))
+            {            
+                analysis = analysis + "You are a bit skinny";
+            }
+
+            if ((22 >= bmi) && (bmi <= 28))
+            {
+                analysis = analysis + "You are just fine";
+            }
+
+            if ((28 >= bmi) && (bmi <= 35))
+            {
+                analysis = analysis + "You are a bit overweight";
+            }
+
+            if (bmi > 35)
+            {
+                analysis = analysis + "You are way too fat, you fat fuck";
+            }
 
             return analysis;
         }
